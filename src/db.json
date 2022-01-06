@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "nom": "hichem",
+      "prenom": "smati",
+      "age": "22",
+      "id": 1
+    },
+    {
+      "nom": "hichem ",
+      "prenom": "dahi",
+      "age": "23",
+      "id": 2
+    }
+  ]
+}

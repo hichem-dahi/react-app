@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import CreatePost from "./components/create-post";
+import PostsList from "./components/posts-list";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="flex justify-evenly border">
+        <h1 className="text-2xl">Application</h1>
+        <nav>
+          <ul>
+            <li className="text-red-400">
+              <Link to="/create-post">Create post</Link>
+              <Link to="/posts-list">posts list</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="flex justify-center mt-20">
+        <Routes>
+          <Route
+            path="/create-post"
+            element={<CreatePost></CreatePost>}
+          ></Route>
+          <Route path="/posts-list" element={<PostsList></PostsList>}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }
-
-export default App;
